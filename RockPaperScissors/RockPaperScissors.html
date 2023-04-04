@@ -81,16 +81,23 @@
             card.addEventListener('click', ()=> {
                 card.classList.add('enlarge');
             })
-
+            card.addEventListener('click', ()=> {
+                if(compPoint ==5) {
+                    alert('stop trying ');
+                }
+            })
             card.addEventListener('transitionend', removeTransition);
             card.addEventListener('click', ()=> {
                 
                 let [first,second] = card.className.split(' ');
 
-                if(compPoint == 5 || userPoint == 5) {
+                if(compPoint == 5){
+                    alert('The COmputer took over your dog, you lost');
                     return;
-                };
-
+                } else if(userPoint==5) {
+                    alert('You won, you received a dog coint');
+                    return;
+                }
                 let compChoice = getComputerChoice();
                 if ((second=='rock' && compChoice =='scissors') || (second== 'scissors' && compChoice == 'paper' )|| (second == 'paper' && compChoice =='rock')){
                 userPoint++;
@@ -113,6 +120,7 @@
                 userScore.textContent = `${userPoint}`;
                 compScore.textContent =`${compPoint}`;
                 
+                
             
             };
 
@@ -121,8 +129,6 @@
             
         });
 
-            
-        
         
         
 
