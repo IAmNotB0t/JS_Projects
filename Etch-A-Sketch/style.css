@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #d9caab;
+}
+
+header {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    
+}
+
+.menu {
+    border: 2px solid black;
+    width: 40rem;
+}
+
+.grids{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    border: 2px solid black;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    
+    
+    
+
+}
+
+.grids * { 
+    border: 2px solid black;
+    width: 20%;
+    
+    flex-grow: 1;
+    
+    
+   
+    
+}
+
+.box {
+    background-color: blue;
+
+};
