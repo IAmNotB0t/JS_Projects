@@ -1,6 +1,6 @@
 :root {
     --dimension: 100%;
-    --color: #d9caab;
+    --color: black;
 
 }
 
@@ -74,7 +74,7 @@ main {
 .grids * { 
     border: 1px solid black;
     
-        
+   
     flex-grow: 1;
     
     
@@ -84,5 +84,9 @@ main {
 
 .box {
     width:var(--dimension);
-    background-color:var(--color);
+    background-color:#d9caab;
+}
+
+.box:hover {
+    background-color: black;
 }
