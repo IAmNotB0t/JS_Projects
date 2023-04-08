@@ -1,5 +1,5 @@
 :root {
-    --dimension: 100%;
+    --dimension: 1.56%;
     --color: black;
 
 }
@@ -89,4 +89,8 @@ main {
 
 .box:hover {
     background-color: black;
+}
+
+.blue {
+    background-color: var(--color);
 }

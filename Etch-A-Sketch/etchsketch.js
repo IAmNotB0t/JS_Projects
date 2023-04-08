@@ -2,8 +2,16 @@ const div = document.createElement('div');
 const grids = document.querySelector('.grids');
 const dimension = document.getElementById('dimension');
 const color = document.getElementById('color');
+let pallete = 'black'
 
 color.addEventListener('change', colorOption);
+
+function colorOption() {
+    document.documentElement.style.setProperty(`--${this.name}`, this.value);
+    pallete = this.value;
+    
+    
+}
 
 
 
@@ -20,20 +28,23 @@ function handleUpdate() {
     for(let i =0 ; i<canvasSize; i++) {
         grids.innerHTML += '<div class="box"></div>';
     };
-
+    
     boxes = document.querySelectorAll('.box');
     
-
+    
+    
     boxes.forEach((pixels)=>{
+       
         pixels.addEventListener('mouseover', ()=> {
-            pixels.style.backgroundColor = 'var(--color)';
-        })
+            pixels.style.backgroundColor = `${pallete}`;
+
+            
+        });
+
+        
     })
 
 };
 
-function colorOption() {
-    document.documentElement.style.setProperty(`--${this.name}`, this.value);
-    
-}
+
 
